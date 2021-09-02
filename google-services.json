@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "147608146145",
+    "project_id": "signo-87d3d",
+    "storage_bucket": "signo-87d3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147608146145:android:a431d9a23925fe798c67a0",
+        "android_client_info": {
+          "package_name": "com.e.signorinasign"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147608146145-brrjivl2q0db0qgpm317p0j11b0c34bi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.e.signorinasign",
+            "certificate_hash": "9eebaf985b61a1dcbac37001e4a2d707d2ce7373"
+          }
+        },
+        {
+          "client_id": "147608146145-hmtp4nu3r0p0p2u8vh1egqcuiecnuto1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4WEpxkTvtihUfxwpAnQevJe1NqzyznK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147608146145-hmtp4nu3r0p0p2u8vh1egqcuiecnuto1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
