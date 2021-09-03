@@ -4,14 +4,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.renderscript.ScriptGroup;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.e.signorinasign.Model.Users;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -28,6 +32,9 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText InputName,InputPhoneNumber,InputPassword;
     private ProgressDialog loadingBar;
 
+    Context context;
+    Resources resource;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +45,24 @@ public class RegisterActivity extends AppCompatActivity {
         InputPassword = (EditText) findViewById(R.id.register_password);
         InputPhoneNumber = (EditText) findViewById(R.id.register_phoneNumber);
         loadingBar = new ProgressDialog(this);
+        if(Users.flag==1) {
+            context = LocaleHelper.setLocale(RegisterActivity.this, "hi");
+            resource = context.getResources();
+            createAccountButton.setText(resource.getString(R.string.create_account));
+            InputName.setText(resource.getString(R.string.name));
+            InputPassword.setText(resource.getString(R.string.password));
+            InputPhoneNumber.setText(resource.getString(R.string.phone_number));
+
+        }
+        if(Users.flag==0)
+        {
+            context = LocaleHelper.setLocale(RegisterActivity.this, "en");
+            resource = context.getResources();
+            createAccountButton.setText(resource.getString(R.string.create_account));
+            InputName.setText(resource.getString(R.string.name));
+            InputPassword.setText(resource.getString(R.string.password));
+            InputPhoneNumber.setText(resource.getString(R.string.phone_number));
+        }
 
         createAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override

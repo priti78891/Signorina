@@ -1,3 +1,20 @@
 <resources>
+
     <string name="app_name">Signorina Sign</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="happiness_is_not_in_money_but_in_shopping">Happiness is not in money,but in shopping</string>
+    <string name="join_now">Join Now</string>
+    <string name="english">ENGLISH</string>
+    <string name="not_an_admin">Not an admin?</string>
+    <string name="an_admin">An admin?</string>
+    <string name="login">Login</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="password">Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="logout">logout</string>
+    <string name="create_account">Create Account</string>
+    <string name="name">Name</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
 </resources>

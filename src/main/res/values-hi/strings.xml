@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="app_name">Signorina Sign</string>
+    <string name="already_have_an_account_login">क्या आपके पास पहले से एक खाता मौजूद है? लॉग इन करें</string>
+    <string name="happiness_is_not_in_money_but_in_shopping">खुशी पैसे में नहीं, खरीदारी में है</string>
+    <string name="join_now">अब शामिल हों</string>
+    <string name="english">अंग्रेज़ी</string>
+    <string name="not_an_admin">व्यवस्थापक नहीं है?</string>
+    <string name="an_admin">एक व्यवस्थापक?</string>
+    <string name="login">लॉग इन करें</string>
+    <string name="forget_password">पासवर्ड भूल गया</string>
+    <string name="remember_me">पहचाना की नहीं</string>
+    <string name="logout">लॉग आउट</string>
+    <string name="create_account">खाता बनाएं</string>
+    <string name="password">पासवर्ड</string>
+    <string name="phone_number">फ़ोन नंबर</string>
+    <string name="name">नाम</string>
 </resources>

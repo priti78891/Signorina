@@ -16,7 +16,7 @@
         android:layout_marginStart="179dp"
         android:layout_marginTop="82dp"
         android:background="@drawable/input_design"
-        android:text="logout" />
+        android:text="@string/logout" />
 
     <EditText
         android:id="@+id/phoneNumber"
@@ -27,7 +27,7 @@
         android:padding="20dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:hint="Phone Number"
+        android:hint="@string/phone_number"
         android:textStyle="bold"
         android:inputType="number"
         android:textSize="17sp"
@@ -43,7 +43,7 @@
         android:padding="20dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:textStyle="bold"
         android:textSize="17sp"
@@ -62,21 +62,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/Material.Drawable.CheckBox"
-            android:text="Remember me"
+            android:text="@string/remember_me"
             android:gravity="clip_vertical"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginLeft="17dp"
             />
-
-        <TextView
-            android:id="@+id/forget_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Forget Password"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:layout_marginLeft="55dp"/>
 
 
 
@@ -94,7 +85,7 @@
         android:padding="17dp"
         android:textAllCaps="false"
         android:textSize="18sp"
-        android:text="Login"
+        android:text="@string/login"
         android:textAlignment="center"
         android:textStyle="bold|italic"/>
 
@@ -102,7 +93,7 @@
         android:id="@+id/an_admin"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text=" An admin?"
+        android:text="@string/an_admin"
         android:layout_below="@+id/login_btn"
         android:layout_marginLeft="300dp"
         android:layout_marginTop="5dp"
@@ -114,7 +105,7 @@
         android:id="@+id/not_an_admin"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="Not an admin?"
+        android:text="@string/not_an_admin"
         android:layout_below="@+id/login_btn"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp"

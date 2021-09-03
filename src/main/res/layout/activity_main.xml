@@ -22,7 +22,7 @@
         android:id="@+id/language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ENGLISH"
+        android:text="@string/english"
         android:textSize="16sp"
         android:layout_marginStart="35dp"
         android:textStyle="bold"
@@ -43,7 +43,7 @@
       android:layout_width="270dp"
       android:layout_height="wrap_content"
       android:layout_marginTop="95dp"
-      android:text="Happiness is not in money,but in shopping"
+      android:text="@string/happiness_is_not_in_money_but_in_shopping"
       android:textStyle="bold|italic"
       android:textSize="11sp"
       android:textColor="@color/white"
@@ -63,7 +63,7 @@
       android:padding="20dp"
       android:textAllCaps="false"
       android:textSize="18sp"
-      android:text="Already have an account? Login"
+      android:text="@string/already_have_an_account_login"
       android:textStyle="bold|italic"/>
 
   <Button
@@ -79,7 +79,7 @@
       android:textAllCaps="false"
       android:textSize="18sp"
       android:textColor="@color/white"
-      android:text="Join Now"
+      android:text="@string/join_now"
       android:textStyle="bold|italic"/>
 
 

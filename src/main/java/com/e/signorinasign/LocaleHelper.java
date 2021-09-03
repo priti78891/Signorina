@@ -11,6 +11,9 @@ import android.preference.PreferenceManager;
 
 import java.util.Locale;
 
+/**
+ * Created by abdalla on 10/2/17.
+ */
 
 public class LocaleHelper {
 
@@ -74,7 +77,9 @@ public class LocaleHelper {
 
         Configuration configuration = resources.getConfiguration();
         configuration.locale = locale;
-        configuration.setLayoutDirection(locale);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            configuration.setLayoutDirection(locale);
+        }
 
         resources.updateConfiguration(configuration, resources.getDisplayMetrics());
 

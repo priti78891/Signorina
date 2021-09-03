@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.e.signorinasign.Model.Users;
+import com.e.signorinasign.Prevalent.Prevalent;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -31,6 +34,9 @@ public class LognActivity extends AppCompatActivity {
     private CheckBox chkBox;
     private TextView anAdmin,notAnAdmin;
     private String parentDb = "users";
+
+    Context context;
+    Resources resource;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +53,32 @@ public class LognActivity extends AppCompatActivity {
         loadingBar = new ProgressDialog(this);
         chkBox = (CheckBox) findViewById(R.id.remember_me);
         Paper.init(this);
+        if(Users.flag==1) {
+            context = LocaleHelper.setLocale(LognActivity.this, "hi");
+            resource = context.getResources();
+
+            InputPassword.setText(resource.getString(R.string.password));
+            logout.setText(resource.getString(R.string.logout));
+            login.setText(resource.getString(R.string.login));
+            InputPhoneNumber.setText(resource.getString(R.string.phone_number));
+            anAdmin.setText(resource.getString(R.string.an_admin));
+            notAnAdmin.setText(resource.getString(R.string.not_an_admin));
+
+
+        }
+
+        if(Users.flag==0)
+        {
+            context = LocaleHelper.setLocale(LognActivity.this, "en");
+            resource = context.getResources();
+
+            InputPassword.setText(resource.getString(R.string.password));
+            logout.setText(resource.getString(R.string.logout));
+            login.setText(resource.getString(R.string.login));
+            InputPhoneNumber.setText(resource.getString(R.string.phone_number));
+            anAdmin.setText(resource.getString(R.string.an_admin));
+            notAnAdmin.setText(resource.getString(R.string.not_an_admin));
+        }
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,6 +144,11 @@ public class LognActivity extends AppCompatActivity {
     }
 
     private void AllowAccessToAccount(String phone, String password) {
+        if(chkBox.isChecked())
+        {
+            Paper.book().write(Prevalent.UserPhoneKey,phone);
+            Paper.book().write(Prevalent.UserPasswordKey,password);
+        }
 
         final DatabaseReference RootRef= FirebaseDatabase.getInstance().getReference();
         RootRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -138,7 +175,7 @@ public class LognActivity extends AppCompatActivity {
                                 Toast.makeText(LognActivity.this, "logged in Successfully...", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
-                                Intent intent = new Intent(LognActivity.this,MainActivity2.class);
+                                Intent intent = new Intent(LognActivity.this,HomeActivity.class);
                                 startActivity(intent);
                             }
 

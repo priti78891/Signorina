@@ -2,6 +2,7 @@ package com.e.signorinasign.Model;
 
 public class Users {
 
+    public static int flag =0;
     private String name,phone,password;
     public Users()
     {
